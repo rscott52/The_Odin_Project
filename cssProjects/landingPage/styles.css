@@ -30,7 +30,7 @@ ul {
     flex-direction: row;
     justify-content: center;
     padding:0 100px;
-    gap: 500px;
+    gap: 250px;
 }
 
 .content1 {
@@ -51,7 +51,7 @@ ul {
     /* justify-content: center; */
     align-items: center;
     width: 100%;
-    height: 486px;
+    height: 468px;
 }
 
 .container2 h2 {
