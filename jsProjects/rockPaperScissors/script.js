@@ -1,15 +1,15 @@
+// Declared Variables for Scores and Round count. 
 let humanScore  = 0;
 let computerScore = 0;
 let roundCount= 0;
 
-
+// Function that generates the Computer Choice at random.
 function getComputerChoice() {
     let comChoice = ["rock", "paper", "scissors"]
     return comChoice[(Math.floor(Math.random() * comChoice.length))];
 };
 
-getComputerChoice();
-
+// Function that generates the Choice of the Player
 function getHumanChoice () {
    let humChoice = prompt("Please Choose rock, paper, or scissors");
 
@@ -22,8 +22,9 @@ function getHumanChoice () {
     } else {
         alert("That is not a valid selection, please try again!")
     }   
-}
+};
 
+// Function that compares the Player Choice to the Computer Choice, and tracks scores. 
 function playRound(getHumanChoice, getComputerChoice) {
 
     if (getHumanChoice === "rock" && getComputerChoice === "scissors"){
@@ -53,9 +54,10 @@ function playRound(getHumanChoice, getComputerChoice) {
     }
 };
 
+// Function that tracks the round count and gives the final output of who wins. 
 function playGame() {
     for (let roundCount = 0; roundCount <= 5; roundCount++) {
-        if (roundCount < 5) {
+        if (roundCount < 5 && getHumanChoice) {
         playRound(getHumanChoice(), getComputerChoice());
         } else {
             if (humanScore > computerScore) {
@@ -66,4 +68,6 @@ function playGame() {
         }
     }
 };
+
+// Invokes the function to run the game. 
 playGame();
