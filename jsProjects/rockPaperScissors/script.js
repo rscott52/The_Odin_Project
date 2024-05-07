@@ -71,3 +71,5 @@ function playGame() {
 
 // Invokes the function to run the game. 
 playGame();
+
+// For future development, I want to make the roundCount not count ties or invalid submissions from the player. 
